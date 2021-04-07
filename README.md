@@ -6,4 +6,6 @@ This project is for me to put everything I studied in this course: [Developing A
 ### My first app
 I developed an app called "Dice Roller", where it is an application that I roll 6-sided dice.
 
-![Dice Roller app start](/images/Screenshot_01.png) | ![Dice Roller app Roll](/images/Screenshot_02.png)
+Dice Roller app start | Dice Roller app Roll
+--- | ---
+![Dice Roller app start](images/Screenshot_01.png) | ![Dice Roller app Roll](images/Screenshot_02.png)
