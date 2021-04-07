@@ -8,4 +8,4 @@ I developed an app called "Dice Roller", where it is an application that I roll 
 
 Dice Roller app start | Dice Roller app Roll
 --- | ---
-![Dice Roller app start](images/Screenshot_01.png) | ![Dice Roller app Roll](images/Screenshot_02.png)
+![Dice Roller app start](android-dice-roller/images/Screenshot_01.png) | ![Dice Roller app Roll](android-dice-roller/images/Screenshot_02.png)
