@@ -15,4 +15,4 @@ Dice Roller app start | Dice Roller app Roll
 I developed about Binding, styles and how to hide a keyboard in this app.
 About Me edit text | About Me hide button and keyboard
 --- | ---
-![About Me edit text](android-about-me/images/Screenshot_201.png) | ![About Me hide button and keyboard](android-about-me/images/Screenshot_202.png)
+![About Me edit text](android-about-me/images/Screenshot_201.jpg) | ![About Me hide button and keyboard](android-about-me/images/Screenshot_202.jpg)
