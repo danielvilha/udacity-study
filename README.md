@@ -16,3 +16,10 @@ I developed about Binding, styles and how to hide a keyboard in this app.
 About Me edit text | About Me hide button and keyboard
 --- | ---
 ![About Me edit text](android-about-me/images/Screenshot_201.jpg) | ![About Me hide button and keyboard](android-about-me/images/Screenshot_202.jpg)
+
+
+### Color My Views
+I designed my application with a good user experience called ColorMyViews, with basic UI layout design. and with the types of visualization in ConstraintLayout.
+ColorMyViews start | ColorMyViews Colored | ColorMyViews Colored More
+--- | --- | ---
+![ColorMyViews start ](android-color-my-views/images/Screenshot_301.jpg) | ![ColorMyViews Colored ](android-color-my-views/images/Screenshot_302.jpg) | ![ColorMyViews  Colored More ](android-color-my-views/images/Screenshot_303.jpg)

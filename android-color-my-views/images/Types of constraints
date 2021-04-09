@@ -1,0 +1,8 @@
+Types of constraints
+
+Android Studio allows you to use the following types of constraints:
+
+1. Fixed constraint: A constraint that is specified using a hard-coded number.
+2. Adaptable constraint: A constraint that defines a relationship in relative and weighted terms.
+3. Absolute positioning: A numerical positioning, such as the position in x, y coordinates.
+4. Relative positioning: Views are positioned by specifying relationships with other views.
