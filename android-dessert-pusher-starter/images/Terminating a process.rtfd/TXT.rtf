@@ -1,0 +1,187 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red35\green47\blue57;
+\red62\green62\blue62;\red12\green0\blue108;\red14\green32\blue47;\red65\green74\blue82;\red17\green110\blue137;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c18151\c24051\c28711;
+\cssrgb\c31048\c31048\c30971;\cssrgb\c5464\c5535\c50141;\cssrgb\c6011\c17021\c24065;\cssrgb\c32280\c36213\c39663;\cssrgb\c3182\c50725\c60835;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid102\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid202\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Terminating a process\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs32 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	1	}\cb3 \expnd0\expndtw0\kerning0
+Make sure you are using a device or emulator running at least API level 28. This is easier to set up for an emulator.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	2	}\cb3 \expnd0\expndtw0\kerning0
+Make sure adb is installed. If not, see instructions below.\
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	3	}\cb3 \expnd0\expndtw0\kerning0
+Make sure your app is in the background - this only happens when the app is in the background. You can do this by hitting the 
+\f0\b \cb3 home
+\f1\b0 \cb3  button.\
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	4	}\cb3 \expnd0\expndtw0\kerning0
+Run the command: \uc0\u8232 \cb3 \uc0\u8237 adb\cb3  \cb3 shell\cb3  \cb3 am\cb3  \cb3 kill\cb3  \cb3 com\cb3 .example.android.dessertpusher\cb3 \uc0\u8236 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	5	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 \uc0\u8232 \cb3 \uc0\u8236 This will stop the process as-if it had been stopped by the Android operating system.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 Adding ADB to your path\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs32 \cf2 \cb3 If you try running adb in a terminal and you see something similar to the message below, read on:\
+\pard\pardeftab720\partightenfactor0
+
+\fs30 \cf2 \cb3 {{\NeXTGraphic screen-shot-2018-11-01-at-11.03.25-am.png \width8280 \height1280 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://developer.android.com/studio/command-line/adb"}}{\fldrslt 
+\fs32 \cf2 \cb3 ADB (Android Debug Bridge)}}
+\fs32 \cb3  is command line tool, and if you want to use it from the command line, it needs to be part of your path. First you\'92ll find where the adb executable lives, then you\'92ll add that to your path.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb3 1. Find the platform-tools folder which contains adb:
+\f1\b0 \cb3 \
+Adb is part of the Android SDK, which is downloaded as part of Android Studio. You can find the location of this SDK by going to 
+\f0\b \cb3 Tools -> SDK Manager
+\f1\b0 \cb3 \
+\pard\pardeftab720\partightenfactor0
+
+\fs30 \cf2 \cb3 {{\NeXTGraphic screen-shot-2018-11-01-at-11.05.18-am.png \width11340 \height600 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 ADB is located in this location, followed by platform-tools/ so in the example above, you could find adb in:\
+/Users/lmf/Library/Android/sdk/platform-tools/\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 \cb3 2. Add adb to your path:
+\f1\b0 \cb3 \
+Adding a variable to your path varies by platform, follow the instructions below to add the platform-tools location you located above.\
+
+\f0\b \cb3 Windows
+\f1\b0 \cb3 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	1	}\cb3 \expnd0\expndtw0\kerning0
+Go to 
+\f0\b \cb3 Advanced system settings:
+\f1\b0 \cb3 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Windows 8 and 10: 
+\f0\b \cb3 Search -> System (Control Panel) -> Advanced system settings
+\f1\b0 \cb3 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Windows 7: Right-click 
+\f0\b \cb3 Computer -> Properties -> Advanced system settings
+\f1\b0 \cb3 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Windows Vista: Right click 
+\f0\b \cb3 My Computer -> Properties -> Advanced system settings
+\f1\b0 \cb3 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Windows XP: 
+\f0\b \cb3 Start -> Control Panel -> System -> Advanced tab
+\f1\b0 \cb3 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	2	}\cb3 \expnd0\expndtw0\kerning0
+Click 
+\f0\b \cb3 Environment Variables
+\f1\b0 \cb3 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	3	}\cb3 \expnd0\expndtw0\kerning0
+Find the 
+\f0\b \cb3 System Variables
+\f1\b0 \cb3  section and then look to see if you have a 
+\f0\b \cb3 PATH
+\f1\b0 \cb3  environment variable:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+If you find one, click 
+\f0\b \cb3 Edit
+\f1\b0 \cb3 \
+\ls2\ilvl1\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+If you do not find one, click 
+\f0\b \cb3 New
+\f1\b0 \cb3  to add one\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	4	}\cb3 \expnd0\expndtw0\kerning0
+Add \cb3 \uc0\u8237 ;<Path to platform-tools>\cb3 \uc0\u8236  to the end of the 
+\f0\b \cb3 Variable
+\f1\b0 \cb3  value box\
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	5	}\cb3 \expnd0\expndtw0\kerning0
+Click 
+\f0\b \cb3 OK
+\f1\b0 \cb3  on all windows to save\
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	6	}\cb3 \expnd0\expndtw0\kerning0
+Ensure you can run adb by typing:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 adb\cb3 \uc0\u8236 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	7	}\cb3 \expnd0\expndtw0\kerning0
+You should see output, including something like:\
+\pard\pardeftab720\partightenfactor0
+
+\fs30 \cf2 \cb3 {{\NeXTGraphic screen-shot-2018-11-01-at-11.14.21-am.png \width5100 \height640 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs32 \cf2 \cb3 Mac/Linux
+\f1\b0 \cb3 \
+Adding a path variable is done using the terminal on Mac/Linux.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	1	}\cb3 \expnd0\expndtw0\kerning0
+Open a 
+\f0\b \cb3 Terminal
+\f1\b0 \cb3 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	2	}\cb3 \expnd0\expndtw0\kerning0
+Create a 
+\f0\b \cb3 .bash_profile
+\f1\b0 \cb3  file if you don\'92t have one already. This is a configuration file for {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Bash_(Unix_shell"}}{\fldrslt \cb3 bash}}) - it\'92s executed when you start bash:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 touch ~/.bash_profile\cb3 \uc0\u8236 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	3	}\cb3 \expnd0\expndtw0\kerning0
+Open up the ~/.bash_profile file in your preferred text editor:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 open ~/.bash_profile\cb3 \uc0\u8236 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	4	}\cb3 \expnd0\expndtw0\kerning0
+Add the following to your .bash_profile file and save:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 export PATH=<Path to platform-tools>:$PATH\cb3 \uc0\u8236 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	5	}\cb3 \expnd0\expndtw0\kerning0
+Either restart your terminal, or enter:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 source ~/.bash_profile\cb3 \uc0\u8236 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	6	}\cb3 \expnd0\expndtw0\kerning0
+Ensure you can run adb by typing:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls3\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 adb\cb3 \uc0\u8236 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	7	}\cb3 \expnd0\expndtw0\kerning0
+You should see output, including something like:\
+\pard\pardeftab720\partightenfactor0
+
+\fs30 \cf2 \cb3 {{\NeXTGraphic screen-shot-2018-11-01-at-11.14.21-am.png \width5100 \height640 \noorient \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+}
