@@ -23,3 +23,10 @@ I designed my application with a good user experience called ColorMyViews, with 
 ColorMyViews start | ColorMyViews Colored | ColorMyViews Colored More
 --- | --- | ---
 ![ColorMyViews start ](android-color-my-views/images/Screenshot_301.jpg) | ![ColorMyViews Colored ](android-color-my-views/images/Screenshot_302.jpg) | ![ColorMyViews  Colored More ](android-color-my-views/images/Screenshot_303.jpg)
+
+
+### Trivia
+I built a multi-screen Android app with the navigation library. This is a trivia app using various fragments and conditional navigations.
+Trivia app start | Trivia app menus | Trivia app About | Trivia app Rules | Trivia app trivia | Trivia app Game Won | Trivia app Game Over
+--- | --- | --- | --- | --- | --- | ---
+![Image 01](android-trivia/images/Screenshot_401.jpg) | ![Image 02](android-trivia/images/Screenshot_402.jpg) | ![Image 03](android-trivia/images/Screenshot_403.jpg) | ![Image 04](android-trivia/images/Screenshot_404.jpg) | ![Image 05](android-trivia/images/Screenshot_405.jpg) | ![Image 06](android-trivia/images/Screenshot_406.jpg) | ![Image 07](android-trivia/images/Screenshot_407.jpg)
