@@ -32,8 +32,15 @@ Trivia app start | Trivia app menus | Trivia app About | Trivia app Rules | Triv
 ![Image 01](android-trivia/images/Screenshot_401.jpg) | ![Image 02](android-trivia/images/Screenshot_402.jpg) | ![Image 03](android-trivia/images/Screenshot_403.jpg) | ![Image 04](android-trivia/images/Screenshot_404.jpg) | ![Image 05](android-trivia/images/Screenshot_405.jpg) | ![Image 06](android-trivia/images/Screenshot_406.jpg) | ![Image 07](android-trivia/images/Screenshot_407.jpg)
 
 
-### Dessert pusher starter
+### Dessert pusher
 I understood the concept of Lifecycles for activities and fragments and developed this app called "Dessert Pusher".
 Dessert Pusher | Dessert Pusher Donnuts | Dessert Pusher Email
 --- | --- | ---
-![Image 01](android-dessert-pusher-starter/images/Screenshot_501.jpg) | ![Image 02](android-dessert-pusher-starter/images/Screenshot_502.jpg) | ![Image 03](android-dessert-pusher-starter/images/Screenshot_503.jpg)
+![Image 01](android-dessert-pusher/images/Screenshot_501.jpg) | ![Image 02](android-dessert-pusher/images/Screenshot_502.jpg) | ![Image 03](android-dessert-pusher/images/Screenshot_503.jpg)
+
+
+### Guess it
+I developed the architecture components with ViewModel with LiveData to build this fun "Guess it" game.
+Guess it | Guess it game | Guess it Play Again
+--- | --- | ---
+![Image 01](android-guess-the-word/images/Screenshot_601.jpg) | ![Image 02](android-guess-the-word/images/Screenshot_602.jpg) | ![Image 03](android-guess-the-word/images/Screenshot_603.jpg)
