@@ -21,16 +21,21 @@ class SleepTrackerFragment : Fragment() {
 
     lateinit var binding: FragmentSleepTrackerBinding
 
+    /**
+     * Called when the Fragment is ready to display content to the screen.
+     *
+     * This function uses DataBindingUtil to inflate R.layout.fragment_sleep_quality.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        // Get a reference to the binding object and inflate the fragment views.
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sleep_tracker, container, false)
 
         val application = requireNotNull(this.activity).application
 
-        // Create an instance of the ViewModel Factory.
+        // I created this instance of the ViewModel Factory.
         val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
         val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
 

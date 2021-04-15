@@ -8,6 +8,10 @@ import com.danielvilha.trackmysleepquality.database.SleepDatabaseDao
 /**
  * Created by danielvilha on 15/04/21
  * https://github.com/danielvilha
+ *
+ * This is pretty much boiler plate code for a ViewModel Factory.
+ *
+ * Provides the SleepDatabaseDao and context to the ViewModel.
  */
 class SleepTrackerViewModelFactory(
     private val dataSource: SleepDatabaseDao,
