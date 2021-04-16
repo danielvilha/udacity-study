@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.danielvilha.trackmysleepquality.R
 import com.danielvilha.trackmysleepquality.database.SleepDatabase
 import com.danielvilha.trackmysleepquality.databinding.FragmentSleepTrackerBinding
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * A [Fragment] subclass.
@@ -64,6 +65,17 @@ class SleepTrackerFragment : Fragment() {
                 // Reset state to make sure we only navigate once, even if the device
                 // has a configuration change.
                 viewModel.doneNavigating()
+            }
+        })
+
+        viewModel.showSnackbarEvent.observe(viewLifecycleOwner, {
+            if (it == true) {
+                Snackbar.make(
+                    activity!!.findViewById(android.R.id.content),
+                    getString(R.string.cleared_message),
+                    Snackbar.LENGTH_SHORT
+                ).show()
+                viewModel.doneShowingSnackbar()
             }
         })
 
