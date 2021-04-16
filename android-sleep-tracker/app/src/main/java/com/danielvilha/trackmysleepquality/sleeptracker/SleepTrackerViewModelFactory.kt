@@ -13,6 +13,7 @@ import com.danielvilha.trackmysleepquality.database.SleepDatabaseDao
  *
  * Provides the SleepDatabaseDao and context to the ViewModel.
  */
+@Suppress("UNCHECKED_CAST")
 class SleepTrackerViewModelFactory(
     private val dataSource: SleepDatabaseDao,
     private val application: Application

@@ -2,6 +2,7 @@ package com.danielvilha.trackmysleepquality.sleeptracker
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.danielvilha.trackmysleepquality.database.SleepDatabaseDao
@@ -12,6 +13,8 @@ import kotlinx.coroutines.*
 /**
  * Created by danielvilha on 15/04/21
  * https://github.com/danielvilha
+ *
+ * ViewModel for SleepTrackerFragment.
  */
 class SleepTrackerViewModel(
     val database: SleepDatabaseDao,
@@ -33,6 +36,18 @@ class SleepTrackerViewModel(
         formatNights(nights, application.resources)
     }
 
+    /**
+     * Variable that tells the Fragment to navigate to a specific [SleepQualityFragment]
+     *
+     * This is private because we don't want to expose setting this value to the Fragment.
+     */
+    private val _navigateToSleepQuality = MutableLiveData<SleepNight>()
+    /**
+     * If this is non-null, immediately navigate to [SleepQualityFragment] and call [doneNavigating]
+     */
+    val navigateToSleepQuality: LiveData<SleepNight>
+            get() = _navigateToSleepQuality
+
     init {
         initializeTonight()
     }
@@ -41,6 +56,16 @@ class SleepTrackerViewModel(
         uiScope.launch {
             tonight.value = getTonightFromDatabase()
         }
+    }
+
+    /**
+     * Call this immediately after navigating to [SleepQualityFragment]
+     *
+     * It will clear the navigation request, so if the user rotates their phone it won't navigate
+     * twice.
+     */
+    fun doneNavigating() {
+        _navigateToSleepQuality.value = null
     }
 
     /**
@@ -95,6 +120,7 @@ class SleepTrackerViewModel(
             oldNight.endTimeMilli = System.currentTimeMillis()
 
             update(oldNight)
+            _navigateToSleepQuality.value = oldNight
         }
     }
 
