@@ -1,0 +1,213 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red62\green62\blue62;
+\red17\green110\blue137;\red14\green32\blue47;\red255\green255\blue255;\red255\green255\blue255;\red62\green62\blue62;
+\red213\green213\blue213;\red247\green247\blue247;\red14\green32\blue47;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c31048\c31048\c30971;
+\cssrgb\c3182\c50725\c60835;\cssrgb\c6011\c17021\c24065;\cssrgb\c100000\c100000\c100000;\cssrgb\c100000\c100000\c99971\c0;\cssrgb\c31082\c31082\c30966;
+\cssrgb\c86667\c86667\c86667;\cssrgb\c97647\c97647\c97647;\cssrgb\c6075\c17099\c24136;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+This page is a refresher and quick reference.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2 \cb3 SQL databases
+\f0\b0 \cb3 \
+SQL databases store data in tables of rows and columns:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+The intersection of a row and column is called a field.\
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Fields contain data, references to other fields, or references to other tables.\
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Each row contains one entity identified by a unique ID, which is usually used as its primary key.\
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Each column is identified by a name that is unique per table.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2 \cb3 SQLite
+\f0\b0 \cb3 \
+SQLite implements an SQL database engine that has the following characteristics:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Self-contained (requires no other components)\
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Serverless (requires no server backend)\
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Zero-configuration (does not need to be configured for your app)\
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Transactional (changes within a single transaction in SQLite either occur completely or not at all)\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain. For details of the SQLite database, see the {\field{\*\fldinst{HYPERLINK "https://www.sqlite.org/"}}{\fldrslt \cb3 SQLite website}}.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2 \cb3 Example table
+\f0\b0 \cb3 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+A database named \cb3 \uc0\u8237 DATABASE_NAME\cb3 \uc0\u8236 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+A table named \cb3 \uc0\u8237 WORD_LIST_TABLE\cb3 \uc0\u8236 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Columns for \cb3 \uc0\u8237 _id\cb3 \uc0\u8236 , \cb3 \uc0\u8237 word\cb3 \uc0\u8236 , and \cb3 \uc0\u8237 definition\cb3 \uc0\u8236 \
+\ls3\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+After inserting the words \cb3 \uc0\u8237 alpha\cb3 \uc0\u8236  and \cb3 \uc0\u8237 beta\cb3 \uc0\u8236 , where \cb3 \uc0\u8237 alpha\cb3 \uc0\u8236  has two definitions, the table might look like this:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 DATABASE_NAME > WORD_LIST_TABLE\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clcbpat7 \clwWidth1065\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw40\brdrcf10 \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx2880
+\clvertalb \clcbpat7 \clwWidth1725\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw40\brdrcf10 \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx5760
+\clvertalb \clcbpat7 \clwWidth2846\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw40\brdrcf10 \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf7 \cb8 _id\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Word\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Definition\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat11 \clwWidth1065\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx2880
+\clvertalt \clcbpat11 \clwWidth1725\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx5760
+\clvertalt \clcbpat11 \clwWidth2846\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0 \cf7 \cb8 1\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 "alpha"\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 "first letter"\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat7 \clwWidth1065\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx2880
+\clvertalt \clcbpat7 \clwWidth1725\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx5760
+\clvertalt \clcbpat7 \clwWidth2846\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 2\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 "beta"\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 "second letter"\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat11 \clwWidth1065\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx2880
+\clvertalt \clcbpat11 \clwWidth1725\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx5760
+\clvertalt \clcbpat11 \clwWidth2846\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 3\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 "alpha"\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 "particle"\cf2 \cb3 \cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+You can find what's in a specific row using the \cb3 \uc0\u8237 _id\cb3 \uc0\u8236 , or you can retrieve rows by formulating queries that select rows from the table by specifying constraints.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2 \cb3 Query language
+\f0\b0 \cb3 \
+You use the SQL query language to interact with the database. Queries can be very complex, but there are four basic operations:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Inserting rows\
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Deleting rows\
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Updating values in rows\
+\ls4\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+Retrieving rows that meet given criteria\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 On Android, the data access object (DAO) provides convenience methods for inserting, deleting, and updating the database.\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.sqlite.org/lang.html"}}{\fldrslt \cf2 \cb3 Full description of the query language}}\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2 \cb3 Query structure
+\f0\b0 \cb3 \
+An SQL query is highly structured and here is an example:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \uc0\u8237 SELECT word, definition FROM WORD_LIST_TABLE WHERE word="alpha"\cb3 \uc0\u8236 \
+Here is the generic version of the sample query:\
+\cb3 \uc0\u8237 SELECT columns FROM table WHERE column="value"\cb3 \uc0\u8236 \
+Parts of a query:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 SELECT\cb3  columns: Select the columns to return. Use * to return all columns.\cb3 \uc0\u8236 \
+\ls5\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 FROM\cb3  table: Specify the table from which to get results.\cb3 \uc0\u8236 \
+\ls5\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 WHERE\cb3 : Optional keyword that precedes conditions that have to be met, for example \cb3 column="value"\cb3 . Common operators are \cb3 =\cb3 , \cb3 *\cb3 , \cb3 LIKE\cb3 , \cb3 <\cb3 , and \cb3 >\cb3 . To connect multiple conditions, use \cb3 AND\cb3  or \cb3 OR\cb3 .\cb3 \uc0\u8236 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Also:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 ORDER BY\cb3 : Optional key phrase for ordering results by the specified column. Specify \cb3 ASC\cb3  for ascending and \cb3 DESC\cb3  for descending. If you don't specify an order, you will get the default order, which may be unordered.\cb3 \uc0\u8236 \
+\ls6\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\cb3 \expnd0\expndtw0\kerning0
+\uc0\u8237 LIMIT\cb3 : Keyword to specify a limited number of results.\cb3 \uc0\u8236 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2 \cb3 Sample queries and results
+\f0\b0 \cb3 \
+The following queries use the previously defined table \cb3 \uc0\u8237 WORD_LIST_TABLE\cb3 \uc0\u8236 .\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalb \clcbpat7 \clwWidth5050\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw40\brdrcf10 \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx4320
+\clvertalb \clcbpat7 \clwWidth10349\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrs\brdrw40\brdrcf10 \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f1\b \cf7 \cb8 Query\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Result\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat11 \clwWidth5050\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx4320
+\clvertalt \clcbpat11 \clwWidth10349\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\b0 \cf7 \cb8 \uc0\u8237 SELECT * FROM WORD_LIST_TABLE\cb8 \uc0\u8236 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Gets all the rows in \cb8 WORD_LIST_TABLE\cb8  table.\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat7 \clwWidth5050\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx4320
+\clvertalt \clcbpat7 \clwWidth10349\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 \uc0\u8237 SELECT word, definition FROM WORD_LIST_TABLE WHERE _id > 2\cb8 \uc0\u8236 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Selects the word and definition columns of all items with an id greater than 2. Returns\cb8 [["alpha", "particle"]]\cb8 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat11 \clwWidth5050\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx4320
+\clvertalt \clcbpat11 \clwWidth10349\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 \uc0\u8237 SELECT _id FROM WORD_LIST_TABLE WHERE word="alpha" AND definition LIKE "%art%"\cb8 \uc0\u8236 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Returns the id of the word alpha with the substring art in the definition. \cb8 [["3"]]\cb8 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat7 \clwWidth5050\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx4320
+\clvertalt \clcbpat7 \clwWidth10349\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 \uc0\u8237 SELECT definition FROM WORD_LIST_TABLE ORDER BY word DESC LIMIT 1\cb8 \uc0\u8236 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Selects all definitions. Sorts in reverse and gets the first row after the list is sorted. Sorting is by the column specified which is word. Note that we can sort by a column that we don't return! \cb8 [["second letter"]]\cb8 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat7 \tamarb400 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clcbpat11 \clwWidth5050\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx4320
+\clvertalt \clcbpat11 \clwWidth10349\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt160 \clpadl320 \clpadb160 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 \uc0\u8237 SELECT * FROM WORD_LIST_TABLE LIMIT 2,1\cb8 \uc0\u8236 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf7 \cb8 Returns 1 item starting at position 2. Position counting starts at 1 (not zero!). Returns \cb8 [["2", "beta", "second letter"]]\cb8 \cell \lastrow\row
+}
