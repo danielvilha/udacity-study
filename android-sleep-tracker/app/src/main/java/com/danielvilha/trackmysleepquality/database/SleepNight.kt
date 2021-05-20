@@ -7,6 +7,8 @@ import androidx.room.PrimaryKey
 /**
  * Created by danielvilha on 15/04/21
  * https://github.com/danielvilha
+ *
+ * Represents one night's sleep through start, end times and the sleep quality.
  */
 @Entity(tableName = "daily_sleep_quality_table")
 data class SleepNight(

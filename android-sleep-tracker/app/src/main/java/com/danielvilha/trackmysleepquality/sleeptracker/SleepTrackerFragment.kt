@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.danielvilha.trackmysleepquality.R
 import com.danielvilha.trackmysleepquality.database.SleepDatabase
 import com.danielvilha.trackmysleepquality.databinding.FragmentSleepTrackerBinding
+import com.danielvilha.trackmysleepquality.sleeptracker.adapter.SleepNightAdapter
 import com.google.android.material.snackbar.Snackbar
 
 /**
@@ -22,7 +22,7 @@ import com.google.android.material.snackbar.Snackbar
  */
 class SleepTrackerFragment : Fragment() {
 
-    lateinit var binding: FragmentSleepTrackerBinding
+    private lateinit var binding: FragmentSleepTrackerBinding
 
     /**
      * Called when the Fragment is ready to display content to the screen.
@@ -68,14 +68,28 @@ class SleepTrackerFragment : Fragment() {
             }
         })
 
+        // Add an Observer on the state variable for showing a Snackbar message
+        // when the CLEAR button is pressed.
         viewModel.showSnackbarEvent.observe(viewLifecycleOwner, {
-            if (it == true) {
+            if (it == true) { // Observed state is true.
                 Snackbar.make(
                     activity!!.findViewById(android.R.id.content),
                     getString(R.string.cleared_message),
-                    Snackbar.LENGTH_SHORT
+                    Snackbar.LENGTH_SHORT // How long to display the message.
                 ).show()
+
+                // Reset state to make sure the snackbar is only shown once, even if the device
+                // has a configuration change.
                 viewModel.doneShowingSnackbar()
+            }
+        })
+
+        val adapter = SleepNightAdapter()
+        binding.sleepList.adapter = adapter
+
+        viewModel.nights.observe(viewLifecycleOwner, {
+            it?.let {
+                adapter.submitList(it)
             }
         })
 
