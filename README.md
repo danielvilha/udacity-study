@@ -51,3 +51,8 @@ I developed this application using data persistence with the Room class. This ap
 Track My Sleep Quality | Track My Sleep Quality start | Track My Sleep Quality stop | Track My Sleep Quality view | Track My Sleep Quality clean
 --- | --- | --- | --- | ---
 ![Image 01](android-sleep-tracker/images/Screenshot_701.jpg) | ![Image 02](android-sleep-tracker/images/Screenshot_702.jpg) | ![Image 03](android-sleep-tracker/images/Screenshot_703.jpg) | ![Image 04](android-sleep-tracker/images/Screenshot_704.jpg) | ![Image 05](android-sleep-tracker/images/Screenshot_705.jpg)
+
+And I changed this app. I created a GridLayout and put the items in it, and I created another fragment to see the items when I click on each one.
+Track My Sleep Quality | Track My Sleep Quality start | Track My Sleep Quality stop | Track My Sleep Quality view | Track My Sleep Quality clean
+--- | --- | --- | --- | ---
+![Image 01](android-sleep-tracker/images/Screenshot_801.jpg) | ![Image 02](android-sleep-tracker/images/Screenshot_802.jpg) | ![Image 03](android-sleep-tracker/images/Screenshot_803.jpg) | ![Image 04](android-sleep-tracker/images/Screenshot_804.jpg) | ![Image 05](android-sleep-tracker/images/Screenshot_805.jpg)
