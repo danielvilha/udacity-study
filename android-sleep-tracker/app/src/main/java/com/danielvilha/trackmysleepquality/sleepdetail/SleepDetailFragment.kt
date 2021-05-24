@@ -1,64 +1,64 @@
-package com.danielvilha.trackmysleepquality.sleepquality
+package com.danielvilha.trackmysleepquality.sleepdetail
 
+import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.danielvilha.trackmysleepquality.R
 import com.danielvilha.trackmysleepquality.database.SleepDatabase
-import com.danielvilha.trackmysleepquality.databinding.FragmentSleepQualityBinding
+import com.danielvilha.trackmysleepquality.databinding.FragmentSleepDetailBinding
 
 /**
- * A [Fragment] subclass.
- * Fragment that displays a list of clickable icons,
- * each representing a sleep quality rating.
- * Once the user taps an icon, the quality is set in the current sleepNight
- * and the database is updated.
+ * A simple [Fragment] subclass.
+ * Activities that contain this fragment must implement the
+ * [SleepDetailFragment] interface
+ * to handle interaction events.
+ * Use the [SleepDetailFragment] factory method to
+ * create an instance of this fragment.
+
  */
-class SleepQualityFragment : Fragment() {
+class SleepDetailFragment : Fragment() {
 
-    lateinit var binding: FragmentSleepQualityBinding
+    private lateinit var binding: FragmentSleepDetailBinding
+    private lateinit var viewModel: SleepDetailViewModel
 
-    /**
-     * Called when the Fragment is ready to display content to the screen.
-     *
-     * This function uses DataBindingUtil to inflate R.layout.fragment_sleep_quality.
-     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Get a reference to the binding object and inflate the fragment views.
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sleep_quality, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_sleep_detail, container, false)
 
         val application = requireNotNull(this.activity).application
-
-        val arguments = SleepQualityFragmentArgs.fromBundle(arguments!!)
+        val arguments = SleepDetailFragmentArgs.fromBundle(arguments!!)
 
         // Create an instance of the ViewModel Factory.
         val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
-        val viewModelFactory = SleepQualityViewModelFactory(arguments.sleepNightKey, dataSource)
+        val viewModelFactory = SleepDetailViewModelFactory(arguments.sleepNightKey, dataSource)
 
         // Get a reference to the ViewModel associated with this fragment.
-        val viewModel = ViewModelProvider(this, viewModelFactory).get(SleepQualityViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(SleepDetailViewModel::class.java)
 
         // To use the View Model with data binding, you have to explicitly
         // give the binding object a reference to it.
         binding.viewModel = viewModel
 
+        binding.lifecycleOwner = this
+
         // Add an Observer to the state variable for Navigating when a Quality icon is tapped.
         viewModel.navigateToSleepTracker.observe(viewLifecycleOwner, {
-            if (it == true) {
+            if (it == true) { // Observed state is true.
                 this.findNavController().navigate(
-                    SleepQualityFragmentDirections.actionSleepQualityFragmentToSleepTrackerFragment()
+                    SleepDetailFragmentDirections.actionSleepDetailFragmentToSleepTrackerFragment()
                 )
                 // Reset state to make sure we only navigate once, even if the device
                 // has a configuration change.
-                viewModel.doneNavigation()
+                viewModel.doneNavigating()
             }
         })
 

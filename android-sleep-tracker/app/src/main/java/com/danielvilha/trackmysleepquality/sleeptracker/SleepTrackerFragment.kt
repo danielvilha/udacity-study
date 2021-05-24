@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.danielvilha.trackmysleepquality.R
 import com.danielvilha.trackmysleepquality.database.SleepDatabase
 import com.danielvilha.trackmysleepquality.databinding.FragmentSleepTrackerBinding
 import com.danielvilha.trackmysleepquality.sleeptracker.adapter.SleepNightAdapter
+import com.danielvilha.trackmysleepquality.sleeptracker.adapter.SleepNightListener
 import com.google.android.material.snackbar.Snackbar
 
 /**
@@ -47,6 +49,8 @@ class SleepTrackerFragment : Fragment() {
 
         binding.viewModel = viewModel
 
+        // Specify the current activity as the lifecycle owner of the binding.
+        // This is the necessary so that the binding can observe LiveData updates.
         binding.lifecycleOwner = this
 
         // Add an Observer on the state variable for Navigating when STOP button is pressed.
@@ -80,16 +84,35 @@ class SleepTrackerFragment : Fragment() {
 
                 // Reset state to make sure the snackbar is only shown once, even if the device
                 // has a configuration change.
-                viewModel.doneShowingSnackbar()
+                viewModel.doneShowingSnackBar()
             }
         })
 
-        val adapter = SleepNightAdapter()
+        val manager = GridLayoutManager(activity, 3)
+        manager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+            override fun getSpanSize(position: Int) = when(position) {
+                0 -> 3
+                else -> 1
+            }
+        }
+        binding.sleepList.layoutManager = manager
+
+        val adapter = SleepNightAdapter(SleepNightListener {
+                nightId -> viewModel.onSleepNightClicked(nightId)
+        })
         binding.sleepList.adapter = adapter
+
+        viewModel.navigateToSleepDataQuality.observe(viewLifecycleOwner, {night ->
+            night?.let {
+                this.findNavController().navigate(SleepTrackerFragmentDirections
+                    .actionSleepTrackerFragmentToSleepDetailFragment(night))
+                viewModel.onSleepDataQualityNavigated()
+            }
+        })
 
         viewModel.nights.observe(viewLifecycleOwner, {
             it?.let {
-                adapter.submitList(it)
+                adapter.addHeaderAndSubmitList(it)
             }
         })
 

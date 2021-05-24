@@ -14,6 +14,7 @@ import kotlinx.coroutines.*
  * ViewModel for SleepQualityFragment.
  *
  * @param sleepNightKey The key of the current night we are working on.
+ * @param database This is the database dao file.
  */
 class SleepQualityViewModel(
     private val sleepNightKey: Long = 0L,
@@ -23,20 +24,20 @@ class SleepQualityViewModel(
     private val viewModelJob = Job()
 
     /**
-     * Variable that tells the fragment whether it should navigate to [SleepTrackerFragment].
+     * Variable that tells the fragment whether it should navigate to [SleepQualityFragment].
      *
      * This is `private` because we don't want to expose the ability to set [MutableLiveData] to
      * the [Fragment]
      */
     private val _navigateToSleepTracker = MutableLiveData<Boolean?>()
     /**
-     * When true immediately navigate back to the [SleepTrackerFragment]
+     * When true immediately navigate back to the [SleepQualityFragment]
      */
     val navigateToSleepTracker: LiveData<Boolean?>
         get() = _navigateToSleepTracker
 
     /**
-     * Call this immediately after navigating to [SleepTrackerFragment]
+     * Call this immediately after navigating to [SleepQualityFragment]
      */
     fun doneNavigation() {
         _navigateToSleepTracker.value = null
