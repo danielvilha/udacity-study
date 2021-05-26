@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.danielvilha.marsrealestate.R
 import com.danielvilha.marsrealestate.databinding.FragmentOverviewBinding
+import com.danielvilha.marsrealestate.network.MarsApiFilter
 import com.danielvilha.marsrealestate.ui.overview.adapters.PhotoGridAdapter
 
 /**
@@ -65,5 +66,17 @@ class OverviewFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.overflow_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        viewModel.updateFilter(
+            when (item.itemId) {
+                R.id.show_rent_menu -> MarsApiFilter.SHOW_RENT
+                R.id.show_buy_menu -> MarsApiFilter.SHOW_BUY
+                else -> MarsApiFilter.SHOW_ALL
+            }
+        )
+        
+        return true
     }
 }

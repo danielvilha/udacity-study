@@ -2,6 +2,7 @@ package com.danielvilha.marsrealestate.network
 
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 /**
  * Created by danielvilha on 24/05/21
@@ -17,5 +18,5 @@ interface MarsApiService {
      * HTTP method
      */
     @GET("realestate")
-    fun getProperties(): Deferred<List<MarsProperty>>
+    fun getProperties(@Query("filter") type: String): Deferred<List<MarsProperty>>
 }
