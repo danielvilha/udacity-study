@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         android:name="com.danielvilha.marsrealestate.ui.detail.DetailFragment"
         android:label="DetailFragment"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="selectedProperty"
+            app:argType="com.danielvilha.marsrealestate.network.MarsProperty" />
+    </fragment>
 </navigation>
