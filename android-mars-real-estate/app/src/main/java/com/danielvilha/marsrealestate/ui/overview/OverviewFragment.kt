@@ -6,7 +6,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import com.danielvilha.marsrealestate.R
 import com.danielvilha.marsrealestate.databinding.FragmentOverviewBinding
-import com.danielvilha.marsrealestate.databinding.ItemGridViewBinding
+import com.danielvilha.marsrealestate.ui.overview.adapters.PhotoGridAdapter
 
 /**
  * Created by danielvilha on 24/05/21
@@ -16,7 +16,7 @@ import com.danielvilha.marsrealestate.databinding.ItemGridViewBinding
  */
 class OverviewFragment : Fragment() {
 
-//    private lateinit var binding: FragmentOverviewBinding
+    private lateinit var binding: FragmentOverviewBinding
 
     /**
      * Lazily initialize our [OverviewViewModel]
@@ -34,13 +34,15 @@ class OverviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Get a reference to the binding object and inflate the fragment views.
-        val binding = ItemGridViewBinding.inflate(inflater)
+        binding = FragmentOverviewBinding.inflate(inflater)
 
         // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
         binding.lifecycleOwner = this
 
         // Giving the binding access to the OverviewViewModel
         binding.viewModel = viewModel
+
+        binding.recycler.adapter = PhotoGridAdapter()
 
         setHasOptionsMenu(true)
         return binding.root
