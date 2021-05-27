@@ -1,5 +1,6 @@
 package com.danielvilha.devbytes.network
 
+import com.danielvilha.devbytes.database.DatabaseVideo
 import com.danielvilha.devbytes.domain.Video
 import com.squareup.moshi.JsonClass
 
@@ -48,4 +49,18 @@ fun NetworkVideoContainer.asDomainModel(): List<Video> {
             updated = it.updated,
             thumbnail = it.thumbnail)
     }
+}
+
+/**
+ * Convert from data transfer objects to database objects
+ */
+fun NetworkVideoContainer.asDatabaseModel(): Array<DatabaseVideo> {
+    return videos.map {
+        DatabaseVideo (
+            title = it.title,
+            description = it.description,
+            url = it.url,
+            updated = it.updated,
+            thumbnail = it.thumbnail)
+    }.toTypedArray()
 }
