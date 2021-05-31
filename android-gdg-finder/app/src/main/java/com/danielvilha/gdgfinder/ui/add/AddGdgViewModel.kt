@@ -15,13 +15,13 @@ class AddGdgViewModel : ViewModel() {
      *
      * This is private because we don't want to expose setting this value to the Fragment.
      */
-    private var _showSnackbarEvent = MutableLiveData<Boolean?>()
+    private var _showSnackBarEvent = MutableLiveData<Boolean?>()
 
     /**
      * If this is true, immediately `show()` a toast and call `doneShowingSnackbar()`.
      */
     val showSnackBarEvent: LiveData<Boolean?>
-        get() = _showSnackbarEvent
+        get() = _showSnackBarEvent
 
     /**
      * Call this immediately after calling `show()` on a toast.
@@ -29,12 +29,11 @@ class AddGdgViewModel : ViewModel() {
      * It will clear the toast request, so if the user rotates their phone it won't show a duplicate
      * toast.
      */
-    fun doneShowingSnackbar() {
-        _showSnackbarEvent.value = null
+    fun doneShowingSnackBar() {
+        _showSnackBarEvent.value = null
     }
 
     fun onSubmitApplication() {
-        _showSnackbarEvent.value = true
-
+        _showSnackBarEvent.value = true
     }
 }
