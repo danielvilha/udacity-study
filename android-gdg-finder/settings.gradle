@@ -1,0 +1,2 @@
+rootProject.name = "GDG finder"
+include ':app'
