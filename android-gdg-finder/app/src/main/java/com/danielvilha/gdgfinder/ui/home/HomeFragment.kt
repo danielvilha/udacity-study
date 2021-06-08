@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.danielvilha.gdgfinder.R
+import com.danielvilha.gdgfinder.databinding.FragmentHomeBinding
 
 /**
  * Created by danielvilha on 29/05/21
@@ -14,15 +17,27 @@ import com.danielvilha.gdgfinder.R
  */
 class HomeFragment : Fragment() {
 
+    private lateinit var binding: FragmentHomeBinding
     private lateinit var viewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+    ): View {
+        binding = FragmentHomeBinding.inflate(inflater)
+
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        return view
+        binding.viewModel = viewModel
+
+        viewModel.navigateToSearch.observe(viewLifecycleOwner, { navigate ->
+            if (navigate) {
+                val navController = findNavController()
+                navController.navigate(R.id.action_home_to_gdg_search)
+                viewModel.onNavigatedToSearch()
+            }
+        })
+
+        return binding.root
     }
 }

@@ -70,3 +70,10 @@ On Android, there are so many things happening in the background that not everyt
 List of videos | YouTube video
 --- | ---
 ![Image 01](android-dev-bytes/images/Screenshot_1001.jpg) | ![Image 02](android-dev-bytes/images/Screenshot_1002.jpg) 
+
+
+### GDG Finder
+This GDG finder helps you locate GDGs across the world or start one on your own. I am using the principles of Material Design with a professional look.
+About GDG | Menu | GDG Search | Apply
+--- | --- | --- | ---
+![Image 01](android-gdg-finder/images/Screenshot_1101.jpg) | ![Image 02](android-gdg-finder/images/Screenshot_1102.jpg) | ![Image 03](android-gdg-finder/images/Screenshot_1103.jpg) | ![Image 04](android-gdg-finder/images/Screenshot_1104.jpg)

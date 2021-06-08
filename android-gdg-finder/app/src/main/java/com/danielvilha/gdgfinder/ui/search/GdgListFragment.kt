@@ -17,6 +17,7 @@ import com.danielvilha.gdgfinder.databinding.FragmentGdgListBinding
 import com.danielvilha.gdgfinder.ui.search.adapter.GdgClickListener
 import com.danielvilha.gdgfinder.ui.search.adapter.GdgListAdapter
 import com.google.android.gms.location.*
+import com.google.android.material.chip.Chip
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -65,6 +66,31 @@ class GdgListFragment : Fragment() {
                     ).show()
                 }
             })
+
+        viewModel.regionList.observe(viewLifecycleOwner, object : Observer<List<String>> {
+            override fun onChanged(data: List<String>?) {
+                data ?: return
+
+                val chipGroup = binding.regionsList
+                val inflator = LayoutInflater.from(chipGroup.context)
+
+                val children = data.map { regionName ->
+                    val chip = inflator.inflate(R.layout.list_region, chipGroup, false) as Chip
+                    chip.text = regionName
+                    chip.tag = regionName
+                    chip.setOnCheckedChangeListener { buttonView, isChecked ->
+                        viewModel.onFilterChanged(buttonView.tag as String, isChecked)
+                    }
+                    chip
+                }
+
+                chipGroup.removeAllViews()
+
+                for (chip in children) {
+                    chipGroup.addView(chip)
+                }
+            }
+        })
 
         setHasOptionsMenu(true)
         return binding.root
